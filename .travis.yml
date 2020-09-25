@@ -32,8 +32,6 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - yarn test
-  - nyc --reporter=lcov yarn run unit
-  - bundle exec rspec
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 services:
