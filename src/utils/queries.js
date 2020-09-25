@@ -1,16 +1,17 @@
-export const createMessageTable = `
-  DROP TABLE IF EXISTS messages;
-  CREATE TABLE IF NOT EXISTS messages (
+export const createExperienceTable = `
+  DROP TABLE IF EXISTS experience;
+  CREATE TABLE IF NOT EXISTS experience (
     id SERIAL PRIMARY KEY,
-    name VARCHAR DEFAULT '',
-    message VARCHAR NOT NULL
-    )
+    company VARCHAR DEFAULT '',
+    position VARCHAR NOT NULL,
+    time VARCHAR NOT NULL,
+    description VARCHAR NOT NULL
+  )
 `;
 
-export const insertMessages = `
-  INSERT INTO messages(name, message)
-  VALUES ('manumac', 'first message'),
-        ('portfolio-backend', 'second message')
+export const insertExperience = `
+  INSERT INTO experience(company, position, time, description)
+  VALUES ('Olapic', 'Frontend Engineer', 'June'19 to actual', 'Working on different business units projects for Olapic platform, mostly dedicated to integrations and media activations. The team applies Scrum Agile having daily meetings along with the client/cast members as well as Sprint Planning and Retrospective meetings. Among different projects, delivery included: PHP, Javascript, Jquery, AngularJS, ReactJS and Python.')
 `;
 
-export const dropMessagesTable = 'DROP TABLE messages';
+export const dropExperienceTable = 'DROP TABLE experience';

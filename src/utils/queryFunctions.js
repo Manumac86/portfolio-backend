@@ -1,8 +1,8 @@
 import { pool } from '../models/pool';
 import {
-  insertMessages,
-  dropMessagesTable,
-  createMessageTable,
+  insertExperience,
+  dropExperienceTable,
+  createExperienceTable,
 } from './queries';
 
 export const executeQueryArray = async arr => new Promise(resolve => {
@@ -13,6 +13,6 @@ export const executeQueryArray = async arr => new Promise(resolve => {
   });
 });
 
-export const dropTables = () => executeQueryArray([ dropMessagesTable ]);
-export const createTables = () => executeQueryArray([ createMessageTable ]);
-export const insertIntoTables = () => executeQueryArray([ insertMessages ]);
+export const dropTables = () => executeQueryArray([ dropExperienceTable ]);
+export const createTables = () => executeQueryArray([ createExperienceTable ]);
+export const insertIntoTables = () => executeQueryArray([ insertExperience ]);
